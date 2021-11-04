@@ -110,7 +110,7 @@ dataset = MNIST(
         [transforms.ToTensor(), transforms.Lambda(lambda x: x * intensity)]
     ),
 )
-print('------',dataset)
+print(type(dataset))
 # Record spikes during the simulation.
 spike_record = torch.zeros(update_interval, time, n_neurons)
 
